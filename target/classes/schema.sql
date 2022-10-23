@@ -4,12 +4,16 @@ name VARCHAR,
 surname VARCHAR,
 login VARCHAR,
 password VARCHAR,
-is_teacher BOOLEAN);
+role VARCHAR);
 
-CREATE TABLE users1
+CREATE TABLE lessons
 (ID INT,
+ date int,
  name VARCHAR,
- surname VARCHAR,
- login VARCHAR,
- password VARCHAR,
- is_teacher BOOLEAN);
+ stime INT,
+ endtime INT,
+ lsnumber VARCHAR,
+ lstype VARCHAR,
+ audinumber VARCHAR,
+ teacher VARCHAR);
+ 
