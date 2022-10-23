@@ -2,6 +2,7 @@ CREATE TABLE users
 (ID INT,
 name VARCHAR,
 surname VARCHAR,
+grpnumber INT,
 login VARCHAR,
 password VARCHAR,
 role VARCHAR);
