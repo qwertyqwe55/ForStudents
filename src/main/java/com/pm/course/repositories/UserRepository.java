@@ -12,9 +12,13 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
-    @Query("SELECT DISTINCT b.name FROM User as b")
+
+
+    @Query("SELECT DISTINCT name FROM User")
     List<String> getDistinctName();
-    @Query("SELECT DISTINCT b.surname FROM User as b")
-    List<Integer> getDistinctCost();
+
+
+//    @Query("SELECT DISTINCT b.surname FROM User as b")
+//    List<Integer> getDistinctCost();
 
 }
