@@ -8,7 +8,7 @@ role VARCHAR);
 
 CREATE TABLE lessons
 (ID INT,
- date int,
+ dt int,
  name VARCHAR,
  stime INT,
  endtime INT,
