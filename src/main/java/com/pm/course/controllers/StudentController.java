@@ -1,5 +1,6 @@
 package com.pm.course.controllers;
 
+import com.pm.course.repositories.LessonRepository;
 import com.pm.course.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,9 +12,12 @@ public class StudentController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private LessonRepository lessonRepository;
+
     @GetMapping("/student2")
-    public String showUsers(Model model){
-        model.addAttribute("users",userRepository.findAll());
+    public String showLessons(Model model){
+        model.addAttribute("lessons",lessonRepository.findAll());
         return "student2";
     }
 

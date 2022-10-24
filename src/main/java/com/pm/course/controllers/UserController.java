@@ -33,16 +33,19 @@ public class UserController {
     public String enter(@ModelAttribute User user) {
         List<User> users = userRepository.findAll();
         System.out.println("List: " + users.toString());
-        for (User user1 : users) {
-            if (user1.getLogin().equals(user.getLogin())
-                    && user1.getPassword().equals(user.getPassword())) {
-                if (user1.isTeacher()) {
+        for (User user_check : users) {
+            if (user_check.getLogin().equals(user.getLogin())
+                    && user_check.getPassword().equals(user.getPassword())) {
+                if (user_check.getRole().equals("TEACHER")) {
                     return "teacher";
-                } else {
+                }
+                if (user_check.getRole().equals("STUDENT")){
                     return "student";
                 }
+                if (user_check.getRole().equals("ADMIN")){
+                    return "admin";
+                }
             }
-
         }
         return "error";
     }

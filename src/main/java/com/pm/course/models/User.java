@@ -13,19 +13,22 @@ public class User {
     private String password;
     private String name;
     private String surname;
-    private boolean isTeacher;
+
+    private String grpnumber;
+    private String role;
 
     public User() {
 
     }
 
-    public User(Long id, String login, String password, String name, String surname, boolean isTeacher) {
+    public User(Long id, String login, String password, String name, String surname,String grpnumber, String role) {
         this.id = id;
         this.login = login;
         this.password = password;
         this.name = name;
         this.surname = surname;
-        this.isTeacher = isTeacher;
+        this.grpnumber = grpnumber;
+        this.role = role;
     }
     @Column(name = "login", nullable = false)
     public String getLogin() {
@@ -70,14 +73,18 @@ public class User {
         this.surname = surname;
     }
 
+    @Column(name = "grpnumber", nullable = false)
+    public String getGrpnumber() { return  grpnumber;};
 
-    @Column(name = "isTeacher", nullable = false)
-    public boolean isTeacher() {
-        return isTeacher;
+    public void setGrpnumber(String grpnumber) { this.grpnumber = grpnumber;}
+
+    @Column(name = "role", nullable = false)
+    public String getRole() {
+        return role;
     }
 
-    public void setTeacher(boolean teacher) {
-        isTeacher = teacher;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     @Override
@@ -88,7 +95,8 @@ public class User {
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", isTeacher=" + isTeacher +
+                ", grpnumber='" + grpnumber + '\'' +
+                ", role=" + role +
                 '}';
     }
 }

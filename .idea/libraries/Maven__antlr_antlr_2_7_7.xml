@@ -6,6 +6,9 @@
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7-javadoc.jar!/" />
     </JAVADOC>
+    <NATIVE>
+      <root url="file://$PROJECT_DIR$/../../../../../Program Files/PostgreSQL/15/lib" />
+    </NATIVE>
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/antlr/antlr/2.7.7/antlr-2.7.7-sources.jar!/" />
     </SOURCES>
