@@ -2,12 +2,18 @@ package com.pm.course.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "lessons")
-public class Lesson {
-    private int id;
+public class Lesson implements Serializable {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    private Long id;
     private String week;
     private String dayweek;
     private String pairnumber;
@@ -23,8 +29,9 @@ public class Lesson {
     {
 
     }
-    public Lesson(String week, String dayweek, String pairnumber, String timestart, String timeend, String classroomnumber, String object, String typeobject, String educator, String groups)
+    public Lesson(Long id, String week, String dayweek, String pairnumber, String timestart, String timeend, String classroomnumber, String object, String typeobject, String educator, String groups)
     {
+        this.id = id;
         this.week = week;
         this.dayweek = dayweek;
         this.pairnumber = pairnumber;
@@ -37,8 +44,8 @@ public class Lesson {
         this.groups = groups;
     }
 
-    @Column(name = "id",nullable = false)
-    public int getId(){
+    @Id
+    public Long getId(){
         return id;
     }
     @Column(name = "week", nullable = false)

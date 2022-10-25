@@ -1,7 +1,7 @@
 INSERT INTO users VALUES
 (1,'Gusev','Debil', '19-ПМ-1','gusevDeb','123456','ADMIN'),
 (2,'Gleb','Klyauzov', '19-ПМ-1','klyauzAdm','654321','ADMIN'),
-(3,'Oslan','Shamshetdinov', '19-ПМ-1','shamshAdm','321654', 'ADMIN'),
+(3,'Oslan','Shamshetdinov', '19-ПМ-1','shamshAdm','321654','ADMIN'),
 (4,'Darya','Kotova', '19-ПМ-1','dKot','213456','STUDENT'),
 (5,'Irina','Dogadina', '19-ПМ-1','irDog','312456','STUDENT'),
 (6,'Maxim','Bushuev', '19-ПМ-1','mxBush','412356','STUDENT'),
@@ -22,7 +22,7 @@ INSERT INTO users VALUES
 (21,'Irina','Boriskova', '19-ПМ-2','BorIrin','531263','STUDENT'),
 (22,'Dmitriy','Smirnov', '19-ПМ-2','SmDm','346616','STUDENT'),
 (23,'Zhenya','Letn', '19-ПМ-2','LetnZh','122365','STUDENT'),
-(24,'Andrey','Bagaev', '0','andrGay','111111','TEACHER')
+(24,'Andrey','Bagaev', '0','andrGay','111111','TEACHER'),
 (25, 'A','Rubin','0','rub','111','TEACHER');
 
 INSERT INTO lessons (week, dayweek, pairnumber, timestart, timeend,classroomnumber, object, typeobject, educator, groups) VALUES

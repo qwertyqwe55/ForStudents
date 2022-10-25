@@ -11,6 +11,6 @@ import java.util.List;
 
 @Repository
 public interface LessonRepository extends JpaRepository<Lesson,Long> {
-    @Query("SELECT DISTINCT week FROM User")
-    List<String> getDistinctWeek();
+    @Query("SELECT l FROM Lesson l WHERE l.pairnumber >= '4'")
+    List<Lesson> findDistinctBy();
 }

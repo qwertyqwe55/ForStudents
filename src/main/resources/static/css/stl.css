@@ -1,0 +1,33 @@
+input[type="text"] {
+    border: 1px solid #000000; //цвет рамки
+border-radius: 3px; //закругление углов (общее)
+-webkit-border-radius: 3px; //закругление углов (Google Chrome)
+-moz-border-radius: 3px; //закругление углов (FireFox)
+-khtml-border-radius: 3px; //закругление углов (Safari)
+background: #ffffff !important; // желательно прописывать, так как в Chrome при сохранных данных оно может быть желтым
+outline: none; // удаляет обводку в браузерах хром(желтая) и сафари(синяя)
+height: 24px; // высота на свое усмотрение
+width: 120px; // ширина на свое усмотрение
+color: #ff0000; //цвет шрифта в обычном состоянии
+font-size: 10px; // Размер шрифта
+font-family: Tahoma; // Стиль шрифта
+text-align: center
+}
+
+P { text-align: center }
+H1 { text-align: center }
+
+ a {
+    display:block;
+    width:100px;
+    margin:auto;
+    padding: 9px 17px;
+    background:#3d9c3e;
+    color:#fff!important;
+    text-decoration:none;
+    font-size:17px;
+    text-align: center;
+    border: 2px solid #c5baba;
+    border-radius: 34px;
+}
+

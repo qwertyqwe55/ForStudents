@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Title</title>
+</head>
+
+
+<body>
+<form action="#" th:action="@{/student-get}" th:object="${lesson}" method="get">
+    <p>Number of group: <input type="text" th:field="*{groups}" /></p>
+    <p>Number of group: <input type="text" th:field="*{id}" /></p>
+    <p><input type="submit" value="Search" /></p>
+</form>
+
+<table border = "1">
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Surname</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="lesson:${lessons}">
+        <td th:text = "${lesson.pairnumber}"/>
+        <td th:text = "${lesson.object}"/>
+        <td th:text = "${lesson.educator}"/>
+    </tr>
+    </tbody>
+
+</table>
+</body>
+</html>
