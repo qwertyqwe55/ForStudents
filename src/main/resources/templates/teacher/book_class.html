@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/book-class-get}" th:object="${lesson}" method="get">
+    <p>Number of class: <input type="text" th:field="*{classroomnumber}" /></p>
+    <p>Number of pair: <input type="text" th:field="*{pairnumber}" /></p>
+    <p>Date: <input type="date"  name = "date"/></p>
+    <p><input type="submit" value="Search" /></p>
+</form>
+</body>
+</html>

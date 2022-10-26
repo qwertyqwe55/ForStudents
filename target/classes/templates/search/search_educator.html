@@ -9,8 +9,8 @@
 
 
 <body>
-<form action="#" th:action="@{/student-groups-get}" th:object="${lesson}" method="get">
-    <p>Number of group: <input type="text" th:field="*{groups}" /></p>
+<form action="#" th:action="@{/student-educator-get}" th:object="${lesson}" method="get">
+    <p>Name of educator: <input type="text" th:field="*{educator}" /></p>
     <p><input type="submit" value="Search" /></p>
 </form>
 

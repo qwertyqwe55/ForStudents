@@ -13,4 +13,11 @@ import java.util.List;
 public interface LessonRepository extends JpaRepository<Lesson,Long> {
     @Query("SELECT l FROM Lesson l WHERE l.pairnumber >= '4'")
     List<Lesson> findDistinctBy();
+
+    @Query("SELECT l FROM Lesson l WHERE :#{#pair}=l.pairnumber AND " +
+            ":#{#week}=l.week AND :#{#day}=l.dayweek AND :#{#room}=l.classroomnumber")
+    List<Lesson> checkFree(@Param("pair") String pair,
+                           @Param("week") String week,
+                           @Param("day") String day,
+                           @Param("room") String room);
 }
